@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+  <div>
+    <h1>Welcome User! Please Register</h1>
+
+    <form (submit)='register()'>
+      <label for="">Name:</label>
+      <input type="text" name="name" required minlength=2 [(ngModel)]='user.name' #name='ngModel'> 
+      <br>
+      <label for="">Email:</label>
+      <input type="text" name="email" required minlength=2 [(ngModel)]='user.email' #email='ngModel'> 
+      <br>
+      <label for="">Password:</label>
+      <input type="password" name="password" required minlength=6 [(ngModel)]='user.password' #password='ngModel'> 
+      <br>
+      <label for="">Confirm Password:</label>
+      <input type="password" name="cpassword" required minlength=6 [(ngModel)]='user.cpassword' #cpassword='ngModel'> 
+      <br>
+      <input type="submit">
+    </form>
+
+    <hr>
+
+    <h1>Already Registered? Login!</h1>
+
+    <form (submit)='login()'>
+      <label for="">Email:</label>
+      <input type="text" name="email" required minlength=2 [(ngModel)]='user.email' #email='ngModel'> 
+      <br>
+      <label for="">Password:</label>
+      <input type="password" name="password" required minlength=6 [(ngModel)]='user.password' #password='ngModel'> 
+      <br>
+      <input type="submit">
+    </form>
+
+  </div>
+</body>
+</html>
